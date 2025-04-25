@@ -67,7 +67,7 @@ class Latent_Traverser():
             Number of samples to generate.
         """
         if self.sample_prior:
-            samples = torch.cat(np.random.normal(size=(size, self.latent_dim)), np.zeros(shape=(size, self.input_shape[])))
+            samples = torch.cat(np.random.normal(size=(size, self.latent_dim)), np.zeros(shape=(size, self.input_shape[0]))) # [0] might be wrong
         else:
             samples = np.zeros(shape=(size, self.latent_dim))
 
